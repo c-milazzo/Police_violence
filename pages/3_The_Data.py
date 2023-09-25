@@ -11,4 +11,7 @@ st.subheader("Fatal Police Shootings:")
 st.write(df1)
 st.divider()
 
+st.subheader("Agencies of Fatal Police Shootings:")
+st.write(df2)
+
 
