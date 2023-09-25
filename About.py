@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 st.title("What is this project trying to accomplish?")
 
 st.subheader("This project aims to provide a simple visual representation of "

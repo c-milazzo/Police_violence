@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv("pages/fatal-police-shootings-data.csv")
+df = pd.read_csv("static/fatal-police-shootings-data.csv")
 
 # Define the gender types and counts
 genders_labels = {
@@ -139,9 +139,9 @@ armed_with_figure = px.bar(armed_with_counts_df, x="Armed With", y="Count")
 armed_with_figure.update_xaxes(tickfont=dict(size=14, color='black'), title_font=dict(size=20, color='black'))
 armed_with_figure.update_yaxes(tickfont=dict(size=14, color='black'), title_font=dict(size=20, color='black'))
 
-st.set_page_config(initial_sidebar_state='expanded')
+st.set_page_config(initial_sidebar_state='expanded', layout="wide")
 
-st.title("A breakdown of police-involved fatalities in the US since 2015")
+st.title("A breakdown of police-involved fatalities in the United States since 2015")
 
 st.markdown('<hr style="border: 2px solid #ff5733;">', unsafe_allow_html=True)
 
@@ -160,7 +160,7 @@ st.text("Distribution of states where fatalities occurred.")
 st.plotly_chart(state_figure)
 st.markdown('<hr style="border: 0.5px solid #000000;">', unsafe_allow_html=True)
 
-st.subheader("Mental illness:")
+st.subheader("Mental Illness:")
 st.text("Distribution of victims that were affected with mental illness.")
 st.plotly_chart(mental_figure)
 st.markdown('<hr style="border: 0.5px solid #000000;">', unsafe_allow_html=True)
